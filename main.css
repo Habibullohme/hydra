@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+*, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container{
+    width: 100%;
+    z-index: 1;
+}
+
+body{
+    background: #302C42;
+    /* background-image: url('img/listening.png'); */
+    background-repeat: no-repeat;
+    background-size: 770px; 
+    background-attachment: fixed;
+    background-position: right;
+    z-index: 1;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background: #302C42;
+    padding: 20px 0;
+    position: relative;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar > img {
+    height: 70px;
+    top: -12px;
+    position: relative;
+}
+
+.nav-bar > svg {
+    height: 70px;
+    top: -12px;
+    position: relative;
+}
+
+.nav-bar > h2 {
+    color: #756c99;
+    margin-right: 250px;
+    margin-top: 5px;
+    font-family: "Montserrat", sans-serif;
+}
+
+ul{
+    width: 500px;
+    display: flex;
+    line-height: 35px;
+}
+
+ul > li{
+    list-style: none;
+    margin: 0 20px;
+}
+
+ul > li > a{
+    position: relative;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+ul > li > a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+    background-color: #fff;
+    bottom: -5px;
+    transition: 0.5s transform;
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+ul > li > a:hover{
+    color: #fff;
+}
+
+ul > li > a:hover::before{
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+
+label #btn,
+label #cancel{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+    transform:translate(0, -50%)
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 1000px) {
+   label > #btn {
+    display: inline-block;
+   }
+   
+    ul {
+        position: fixed;
+        top: 0px;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        padding-top: 80px;
+        display: block;
+        line-height: 40px;
+        z-index: 100;
+        background-color: #000;
+        transition: 0.5s;
+    }
+
+    ul > li{
+        margin-left: 50px;
+    }
+
+    ul > li > a{
+        color: #fff;
+        font-size: 20px;
+        
+    }
+
+    .button-bar{
+        margin-top: 20px;
+        
+    }
+
+    
+    
+
+    #check:checked ~ ul{
+        right: 0;
+    }
+
+    #check:checked ~ label #btn{
+        display: none;
+    }
+
+
+    #check:checked ~ label #cancel{
+        display: block;
+        z-index: 101;
+        color: #fff;
+    }
+
+}
+
+
+    
+.container > button{
+    width: 214px;
+    height: 48px;
+    left: 84px;
+    top: 589px;    
+    border-radius: 40px;
+    border: 2px solid #302C42; 
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%);
+    color: #302C42;
+    margin-right: 20px;
+    margin-top: 35px;
+    margin-left: 10px;
+
+
+
+
+}
+
+.container > button:hover{
+    background-color: #f48840;
+    color: #fff;
+    transition: 0.5s;
+}
+
+.button-bar{
+    display: flex;
+    width: 100%;
+}
+
+.button-bar > button{
+    width: 154px;
+    height: 48px;
+    left: 1009px;
+    top: 79px;    
+    font-size: 15px;
+    border: 2px solid #FFFFFF;
+    border-radius: 40px; 
+    background: #302C42;
+    color: #fff;
+    margin-right: 15px;
+    justify-content: space-between;
+    cursor: pointer;
+    text-transform: uppercase;
+
+
+}
+
+.button-bar > button:hover{
+    background: linear-gradient(90deg, #8176AF 0%, #C0B7E8 100%); 
+    color: #fff;
+    transition: 0.5s;
+}
+
+
+
+.h1{
+    padding: 20px;
+    margin-top: -380px;
+    inline-size: 45%;
+    font-size: 45px;
+    font-weight: bold;
+    display: block;
+    max-width: 100%;
+    color: #fff;
+
+/* width: 456px;
+height: 56px;
+left: 84px;
+top: 299px;
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 46px;
+line-height: 56px;
+/* identical to box height 
+
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent; */
+}
+
+.h1 > span{
+font-family: 'Montserrat'sans-serif;
+font-weight: 800;
+font-size: 46px;
+line-height: 56px;
+color: #716192;
+}
+
+.text {  
+    padding: 12px;
+    margin-top: 20px;
+    text-align: left;
+    inline-size: 45%;
+    font-size: 20px;
+    max-width: 100%;
+    color: #fff;
+    font-weight: 400;
+font-size: 16px;
+    
+}
+
+.box{
+    width: 720px;
+    height: auto;
+    padding: 10px;
+    background-color: #302C42;
+    margin-left: 47%;
+    margin-top: 20px;
+    border-radius: 100px 100px 100px 240px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 100px 100px 100px 240px;
+
+}
